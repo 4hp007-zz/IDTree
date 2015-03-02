@@ -1,3 +1,11 @@
+
+
+/*
+Ussage:
+ID3 x = new ID3("//D:/some path/db.accdb","table name");
+x.start().print();
+*/
+
 package id3;
 
 import java.sql.*;
@@ -13,10 +21,11 @@ public class ID3 {
 
     public ID3(String dbPath, String table) {
         this.dbPath = dbPath;
-        this.table = table;
-        //this.play = play;
+        this.table = table;        
     }
-
+    
+//Getting Column names
+    
     public void colls() {
         try {
             
@@ -42,6 +51,7 @@ public class ID3 {
         }
     }
 
+    //Call to create tree
     public Tree<String> start() {
         colls();
         int a = run(null);
@@ -80,6 +90,7 @@ public class ID3 {
 
     }
 
+    //Creates where clause for query
     static String where(Tree<String> n) {
 
         String x = " where ";
@@ -94,6 +105,7 @@ public class ID3 {
         }
     }
 
+    //Selects most feasible attribute
     int run(Tree<String> wh) {
 
         try {
@@ -157,6 +169,7 @@ public class ID3 {
         return 0;
     }
 
+    //Calcuates Entropy
     double calc(String a, double t) {
 
         double y = 0, n = 0;
