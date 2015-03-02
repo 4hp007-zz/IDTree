@@ -11,10 +11,10 @@ public class ID3 {
     Tree<String>[] col;
     Tree<String> root;
 
-    ID3(String dbPath, String table, String play) {
+    public ID3(String dbPath, String table) {
         this.dbPath = dbPath;
         this.table = table;
-        this.play = play;
+        //this.play = play;
     }
 
     public void colls() {
@@ -22,6 +22,7 @@ public class ID3 {
             
             ResultSet rs = connection("");
             ResultSetMetaData rm = rs.getMetaData();
+            play = rm.getColumnName(rm.getColumnCount());
             col = new Tree[rm.getColumnCount() - 2];
             for (int i = 0; i < col.length; i++)
                 col[i] = new Tree(rm.getColumnName(i + 1));
@@ -185,14 +186,14 @@ public class ID3 {
 
     ResultSet connection(String a) {
 
-        ResultSet rs=null;
+        ResultSet rs = null;
         try {
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
             conn = DriverManager.getConnection("jdbc:ucanaccess:" + dbPath);
-            try (PreparedStatement stmt = conn.prepareStatement("select * from " + table + a)) {
-                rs =  stmt.executeQuery();
-                conn.close();
-            }
+            PreparedStatement stmt = conn.prepareStatement("select * from " + table + a);
+            rs = stmt.executeQuery();
+            stmt.close();
+            conn.close();
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(ID3.class.getName()).log(Level.SEVERE, null, ex);
         }
