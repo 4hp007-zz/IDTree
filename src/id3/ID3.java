@@ -189,10 +189,10 @@ public class ID3 {
         try {
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
             conn = DriverManager.getConnection("jdbc:ucanaccess:" + dbPath);
-            PreparedStatement stmt = conn.prepareStatement("select * from " + table + a);
-            rs =  stmt.executeQuery();
-            conn.close();
-            stmt.close();
+            try (PreparedStatement stmt = conn.prepareStatement("select * from " + table + a)) {
+                rs =  stmt.executeQuery();
+                conn.close();
+            }
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(ID3.class.getName()).log(Level.SEVERE, null, ex);
         }
