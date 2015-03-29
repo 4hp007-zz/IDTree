@@ -74,10 +74,7 @@ public class ID3 {
                     child.addChild("UD");
                 else if(a==-4){                  
                     child.addChild("NULL");
-                }
-                else if(a==-5){
-                    child.addChild("RSUD");
-                }
+                }                
                 else{
                     Tree temp = child.addChild(col[a].data);
                     for (Tree<String> tree : col[a].children) {
@@ -86,10 +83,7 @@ public class ID3 {
                     alt.add(temp);
                 }
             }                        
-        }
-        
-              
-
+        }                     
         return root;
 
     }
@@ -115,9 +109,7 @@ public class ID3 {
     int run(Tree<String> wh) {
 
         String x = where(wh);
-        String[] c = x.split(" ");
-        if(c.length>=4*col.length)
-            return -3;
+        String[] c = x.split(" ");        
         int rs = connection(x);  
         if(rs==0){
             return -4;
@@ -129,6 +121,11 @@ public class ID3 {
         
         double h1 = calc(x,rs);
         double y = connection(x+" "+play+" = 'yes'");
+        if(c.length>=4*col.length)
+            if(y>=rs-y)
+                return -1;        
+            else 
+                return -2;
         if(h1==0){
             
             if(y==0)
@@ -153,8 +150,7 @@ public class ID3 {
                 
             }
         }
-        if(h1==gain){
-           /// return -5;
+        if(h1==gain){           
              if(y>=rs-y)
                 return -1;        
             else 
