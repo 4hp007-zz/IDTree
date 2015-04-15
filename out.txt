@@ -1,0 +1,784 @@
+if(PLASMA_GLUCOSE_CONCENTRATION==high){
+ if(BODY_MASS_INDEX==obese){
+  if(AGE==middle){
+   if(DIASTOLIC_BLOOD_PRESSURE==normal){
+    if(Z_2_HOUR_SERUM_INSULIN==low){
+     if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+      yes
+     }
+     else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+      if(DIABETES_PEDIGREE_FUNCTION==normal){
+       if(NUMBER_OF_TIMES_PREGNANT==high){
+        yes
+       }
+       else(NUMBER_OF_TIMES_PREGNANT==normal){
+        yes
+       }
+      }
+      else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+       yes
+      }
+     }
+     else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+      yes
+     }
+    }
+    else if(Z_2_HOUR_SERUM_INSULIN==normal){
+     if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+      if(DIABETES_PEDIGREE_FUNCTION==normal){
+       yes
+      }
+      else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+       yes
+      }
+     }
+     else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+      NULL
+     }
+     else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+      no
+     }
+    }
+    else(Z_2_HOUR_SERUM_INSULIN==high){
+     if(NUMBER_OF_TIMES_PREGNANT==high){
+      if(DIABETES_PEDIGREE_FUNCTION==normal){
+       yes
+      }
+      else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+       no
+      }
+     }
+     else(NUMBER_OF_TIMES_PREGNANT==normal){
+      yes
+     }
+    }
+   }
+   else if(DIASTOLIC_BLOOD_PRESSURE==low){
+    if(Z_2_HOUR_SERUM_INSULIN==low){
+     yes
+    }
+    else if(Z_2_HOUR_SERUM_INSULIN==normal){
+     no
+    }
+    else(Z_2_HOUR_SERUM_INSULIN==high){
+     if(NUMBER_OF_TIMES_PREGNANT==high){
+      yes
+     }
+     else(NUMBER_OF_TIMES_PREGNANT==normal){
+      yes
+     }
+    }
+   }
+   else(DIASTOLIC_BLOOD_PRESSURE==high){
+    yes
+   }
+  }
+  else if(AGE==young){
+   if(DIASTOLIC_BLOOD_PRESSURE==normal){
+    if(NUMBER_OF_TIMES_PREGNANT==high){
+     if(Z_2_HOUR_SERUM_INSULIN==low){
+      yes
+     }
+     else if(Z_2_HOUR_SERUM_INSULIN==normal){
+      if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+       yes
+      }
+      else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+       NULL
+      }
+      else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+       yes
+      }
+     }
+     else(Z_2_HOUR_SERUM_INSULIN==high){
+      if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+       if(DIABETES_PEDIGREE_FUNCTION==normal){
+        yes
+       }
+       else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+        yes
+       }
+      }
+      else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+       NULL
+      }
+      else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+       no
+      }
+     }
+    }
+    else(NUMBER_OF_TIMES_PREGNANT==normal){
+     if(Z_2_HOUR_SERUM_INSULIN==low){
+      if(DIABETES_PEDIGREE_FUNCTION==normal){
+       if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+        no
+       }
+       else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+        no
+       }
+       else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+        NULL
+       }
+      }
+      else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+       yes
+      }
+     }
+     else if(Z_2_HOUR_SERUM_INSULIN==normal){
+      yes
+     }
+     else(Z_2_HOUR_SERUM_INSULIN==high){
+      if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+       no
+      }
+      else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+       NULL
+      }
+      else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+       no
+      }
+     }
+    }
+   }
+   else if(DIASTOLIC_BLOOD_PRESSURE==low){
+    if(NUMBER_OF_TIMES_PREGNANT==high){
+     if(Z_2_HOUR_SERUM_INSULIN==low){
+      yes
+     }
+     else if(Z_2_HOUR_SERUM_INSULIN==normal){
+      no
+     }
+     else(Z_2_HOUR_SERUM_INSULIN==high){
+      yes
+     }
+    }
+    else(NUMBER_OF_TIMES_PREGNANT==normal){
+     if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+      if(Z_2_HOUR_SERUM_INSULIN==low){
+       if(DIABETES_PEDIGREE_FUNCTION==normal){
+        yes
+       }
+       else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+        yes
+       }
+      }
+      else if(Z_2_HOUR_SERUM_INSULIN==normal){
+       yes
+      }
+      else(Z_2_HOUR_SERUM_INSULIN==high){
+       if(DIABETES_PEDIGREE_FUNCTION==normal){
+        yes
+       }
+       else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+        yes
+       }
+      }
+     }
+     else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+      yes
+     }
+     else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+      yes
+     }
+    }
+   }
+   else(DIASTOLIC_BLOOD_PRESSURE==high){
+    yes
+   }
+  }
+  else(AGE==old){
+   if(Z_2_HOUR_SERUM_INSULIN==low){
+    if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+     no
+    }
+    else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      if(NUMBER_OF_TIMES_PREGNANT==high){
+       yes
+      }
+      else(NUMBER_OF_TIMES_PREGNANT==normal){
+       yes
+      }
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      NULL
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      yes
+     }
+    }
+    else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+     no
+    }
+   }
+   else if(Z_2_HOUR_SERUM_INSULIN==normal){
+    yes
+   }
+   else(Z_2_HOUR_SERUM_INSULIN==high){
+    if(DIABETES_PEDIGREE_FUNCTION==normal){
+     yes
+    }
+    else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+     no
+    }
+   }
+  }
+ }
+ else if(BODY_MASS_INDEX==overweight){
+  if(AGE==middle){
+   if(DIABETES_PEDIGREE_FUNCTION==normal){
+    if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+     if(Z_2_HOUR_SERUM_INSULIN==low){
+      no
+     }
+     else if(Z_2_HOUR_SERUM_INSULIN==normal){
+      if(DIASTOLIC_BLOOD_PRESSURE==normal){
+       yes
+      }
+      else if(DIASTOLIC_BLOOD_PRESSURE==low){
+       no
+      }
+      else(DIASTOLIC_BLOOD_PRESSURE==high){
+       NULL
+      }
+     }
+     else(Z_2_HOUR_SERUM_INSULIN==high){
+      no
+     }
+    }
+    else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+     no
+    }
+    else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      yes
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      if(Z_2_HOUR_SERUM_INSULIN==low){
+       NULL
+      }
+      else if(Z_2_HOUR_SERUM_INSULIN==normal){
+       yes
+      }
+      else(Z_2_HOUR_SERUM_INSULIN==high){
+       no
+      }
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      NULL
+     }
+    }
+   }
+   else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+    yes
+   }
+  }
+  else if(AGE==young){
+   if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+    if(DIABETES_PEDIGREE_FUNCTION==normal){
+     if(Z_2_HOUR_SERUM_INSULIN==low){
+      NULL
+     }
+     else if(Z_2_HOUR_SERUM_INSULIN==normal){
+      if(NUMBER_OF_TIMES_PREGNANT==high){
+       if(DIASTOLIC_BLOOD_PRESSURE==normal){
+        no
+       }
+       else if(DIASTOLIC_BLOOD_PRESSURE==low){
+        yes
+       }
+       else(DIASTOLIC_BLOOD_PRESSURE==high){
+        NULL
+       }
+      }
+      else(NUMBER_OF_TIMES_PREGNANT==normal){
+       no
+      }
+     }
+     else(Z_2_HOUR_SERUM_INSULIN==high){
+      yes
+     }
+    }
+    else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+     no
+    }
+   }
+   else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+    if(DIASTOLIC_BLOOD_PRESSURE==normal){
+     if(NUMBER_OF_TIMES_PREGNANT==high){
+      no
+     }
+     else(NUMBER_OF_TIMES_PREGNANT==normal){
+      no
+     }
+    }
+    else if(DIASTOLIC_BLOOD_PRESSURE==low){
+     if(NUMBER_OF_TIMES_PREGNANT==high){
+      yes
+     }
+     else(NUMBER_OF_TIMES_PREGNANT==normal){
+      no
+     }
+    }
+    else(DIASTOLIC_BLOOD_PRESSURE==high){
+     NULL
+    }
+   }
+   else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+    if(DIASTOLIC_BLOOD_PRESSURE==normal){
+     if(Z_2_HOUR_SERUM_INSULIN==low){
+      NULL
+     }
+     else if(Z_2_HOUR_SERUM_INSULIN==normal){
+      no
+     }
+     else(Z_2_HOUR_SERUM_INSULIN==high){
+      no
+     }
+    }
+    else if(DIASTOLIC_BLOOD_PRESSURE==low){
+     no
+    }
+    else(DIASTOLIC_BLOOD_PRESSURE==high){
+     NULL
+    }
+   }
+  }
+  else(AGE==old){
+   if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+    if(Z_2_HOUR_SERUM_INSULIN==low){
+     no
+    }
+    else if(Z_2_HOUR_SERUM_INSULIN==normal){
+     no
+    }
+    else(Z_2_HOUR_SERUM_INSULIN==high){
+     no
+    }
+   }
+   else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+    no
+   }
+   else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+    yes
+   }
+  }
+ }
+ else if(BODY_MASS_INDEX==healthy){
+  if(NUMBER_OF_TIMES_PREGNANT==high){
+   if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+    NULL
+   }
+   else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+    yes
+   }
+   else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+    no
+   }
+  }
+  else(NUMBER_OF_TIMES_PREGNANT==normal){
+   no
+  }
+ }
+ else(BODY_MASS_INDEX==underweight){
+  NULL
+ }
+}
+else if(PLASMA_GLUCOSE_CONCENTRATION==normal){
+ if(BODY_MASS_INDEX==obese){
+  if(AGE==middle){
+   if(Z_2_HOUR_SERUM_INSULIN==low){
+    if(DIABETES_PEDIGREE_FUNCTION==normal){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+       if(NUMBER_OF_TIMES_PREGNANT==high){
+        no
+       }
+       else(NUMBER_OF_TIMES_PREGNANT==normal){
+        yes
+       }
+      }
+      else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+       yes
+      }
+      else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+       NULL
+      }
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      if(NUMBER_OF_TIMES_PREGNANT==high){
+       if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+        no
+       }
+       else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+        yes
+       }
+       else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+        NULL
+       }
+      }
+      else(NUMBER_OF_TIMES_PREGNANT==normal){
+       no
+      }
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+       yes
+      }
+      else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+       no
+      }
+      else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+       NULL
+      }
+     }
+    }
+    else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+     yes
+    }
+   }
+   else if(Z_2_HOUR_SERUM_INSULIN==normal){
+    if(NUMBER_OF_TIMES_PREGNANT==high){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+       no
+      }
+      else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+       NULL
+      }
+      else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+       no
+      }
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      no
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      NULL
+     }
+    }
+    else(NUMBER_OF_TIMES_PREGNANT==normal){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      yes
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+       if(DIABETES_PEDIGREE_FUNCTION==normal){
+        yes
+       }
+       else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+        no
+       }
+      }
+      else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+       NULL
+      }
+      else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+       no
+      }
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      no
+     }
+    }
+   }
+   else(Z_2_HOUR_SERUM_INSULIN==high){
+    if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      if(NUMBER_OF_TIMES_PREGNANT==high){
+       yes
+      }
+      else(NUMBER_OF_TIMES_PREGNANT==normal){
+       yes
+      }
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      yes
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      NULL
+     }
+    }
+    else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+     NULL
+    }
+    else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+     no
+    }
+   }
+  }
+  else if(AGE==young){
+   if(DIASTOLIC_BLOOD_PRESSURE==normal){
+    if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+     if(Z_2_HOUR_SERUM_INSULIN==low){
+      if(NUMBER_OF_TIMES_PREGNANT==high){
+       no
+      }
+      else(NUMBER_OF_TIMES_PREGNANT==normal){
+       no
+      }
+     }
+     else if(Z_2_HOUR_SERUM_INSULIN==normal){
+      if(NUMBER_OF_TIMES_PREGNANT==high){
+       no
+      }
+      else(NUMBER_OF_TIMES_PREGNANT==normal){
+       no
+      }
+     }
+     else(Z_2_HOUR_SERUM_INSULIN==high){
+      if(NUMBER_OF_TIMES_PREGNANT==high){
+       no
+      }
+      else(NUMBER_OF_TIMES_PREGNANT==normal){
+       no
+      }
+     }
+    }
+    else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+     if(NUMBER_OF_TIMES_PREGNANT==high){
+      no
+     }
+     else(NUMBER_OF_TIMES_PREGNANT==normal){
+      if(Z_2_HOUR_SERUM_INSULIN==low){
+       yes
+      }
+      else if(Z_2_HOUR_SERUM_INSULIN==normal){
+       no
+      }
+      else(Z_2_HOUR_SERUM_INSULIN==high){
+       NULL
+      }
+     }
+    }
+    else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+     no
+    }
+   }
+   else if(DIASTOLIC_BLOOD_PRESSURE==low){
+    if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+     if(Z_2_HOUR_SERUM_INSULIN==low){
+      if(NUMBER_OF_TIMES_PREGNANT==high){
+       no
+      }
+      else(NUMBER_OF_TIMES_PREGNANT==normal){
+       no
+      }
+     }
+     else if(Z_2_HOUR_SERUM_INSULIN==normal){
+      if(NUMBER_OF_TIMES_PREGNANT==high){
+       no
+      }
+      else(NUMBER_OF_TIMES_PREGNANT==normal){
+       no
+      }
+     }
+     else(Z_2_HOUR_SERUM_INSULIN==high){
+      no
+     }
+    }
+    else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+     no
+    }
+    else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+     if(NUMBER_OF_TIMES_PREGNANT==high){
+      no
+     }
+     else(NUMBER_OF_TIMES_PREGNANT==normal){
+      if(Z_2_HOUR_SERUM_INSULIN==low){
+       no
+      }
+      else if(Z_2_HOUR_SERUM_INSULIN==normal){
+       no
+      }
+      else(Z_2_HOUR_SERUM_INSULIN==high){
+       NULL
+      }
+     }
+    }
+   }
+   else(DIASTOLIC_BLOOD_PRESSURE==high){
+    yes
+   }
+  }
+  else(AGE==old){
+   if(DIABETES_PEDIGREE_FUNCTION==normal){
+    no
+   }
+   else(DIABETES_PEDIGREE_FUNCTION==abnormal){
+    yes
+   }
+  }
+ }
+ else if(BODY_MASS_INDEX==overweight){
+  if(AGE==middle){
+   if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+    if(Z_2_HOUR_SERUM_INSULIN==low){
+     no
+    }
+    else if(Z_2_HOUR_SERUM_INSULIN==normal){
+     yes
+    }
+    else(Z_2_HOUR_SERUM_INSULIN==high){
+     NULL
+    }
+   }
+   else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+    if(Z_2_HOUR_SERUM_INSULIN==low){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      yes
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      no
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      NULL
+     }
+    }
+    else if(Z_2_HOUR_SERUM_INSULIN==normal){
+     NULL
+    }
+    else(Z_2_HOUR_SERUM_INSULIN==high){
+     yes
+    }
+   }
+   else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+    if(NUMBER_OF_TIMES_PREGNANT==high){
+     yes
+    }
+    else(NUMBER_OF_TIMES_PREGNANT==normal){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      if(Z_2_HOUR_SERUM_INSULIN==low){
+       yes
+      }
+      else if(Z_2_HOUR_SERUM_INSULIN==normal){
+       no
+      }
+      else(Z_2_HOUR_SERUM_INSULIN==high){
+       NULL
+      }
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      no
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      NULL
+     }
+    }
+   }
+  }
+  else if(AGE==young){
+   if(NUMBER_OF_TIMES_PREGNANT==high){
+    if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+     if(Z_2_HOUR_SERUM_INSULIN==low){
+      yes
+     }
+     else if(Z_2_HOUR_SERUM_INSULIN==normal){
+      no
+     }
+     else(Z_2_HOUR_SERUM_INSULIN==high){
+      NULL
+     }
+    }
+    else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      yes
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      no
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      NULL
+     }
+    }
+    else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+     no
+    }
+   }
+   else(NUMBER_OF_TIMES_PREGNANT==normal){
+    no
+   }
+  }
+  else(AGE==old){
+   yes
+  }
+ }
+ else if(BODY_MASS_INDEX==healthy){
+  if(Z_2_HOUR_SERUM_INSULIN==low){
+   no
+  }
+  else if(Z_2_HOUR_SERUM_INSULIN==normal){
+   if(NUMBER_OF_TIMES_PREGNANT==high){
+    if(AGE==middle){
+     no
+    }
+    else if(AGE==young){
+     if(DIASTOLIC_BLOOD_PRESSURE==normal){
+      no
+     }
+     else if(DIASTOLIC_BLOOD_PRESSURE==low){
+      if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+       NULL
+      }
+      else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+       no
+      }
+      else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+       no
+      }
+     }
+     else(DIASTOLIC_BLOOD_PRESSURE==high){
+      NULL
+     }
+    }
+    else(AGE==old){
+     NULL
+    }
+   }
+   else(NUMBER_OF_TIMES_PREGNANT==normal){
+    no
+   }
+  }
+  else(Z_2_HOUR_SERUM_INSULIN==high){
+   no
+  }
+ }
+ else(BODY_MASS_INDEX==underweight){
+  if(DIASTOLIC_BLOOD_PRESSURE==normal){
+   no
+  }
+  else if(DIASTOLIC_BLOOD_PRESSURE==low){
+   no
+  }
+  else(DIASTOLIC_BLOOD_PRESSURE==high){
+   yes
+  }
+ }
+}
+else(PLASMA_GLUCOSE_CONCENTRATION==low){
+ if(AGE==middle){
+  if(Z_2_HOUR_SERUM_INSULIN==low){
+   if(TRICEPS_SKIN_FOLD_THICKNESS==high){
+    no
+   }
+   else if(TRICEPS_SKIN_FOLD_THICKNESS==low){
+    no
+   }
+   else(TRICEPS_SKIN_FOLD_THICKNESS==normal){
+    NULL
+   }
+  }
+  else if(Z_2_HOUR_SERUM_INSULIN==normal){
+   no
+  }
+  else(Z_2_HOUR_SERUM_INSULIN==high){
+   NULL
+  }
+ }
+ else if(AGE==young){
+  no
+ }
+ else(AGE==old){
+  NULL
+ }
+}

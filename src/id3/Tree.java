@@ -4,9 +4,9 @@ import java.util.*;
 
 public class Tree<T> {
 
-    T data;
-    Tree<T> parent;
-    List<Tree<T>> children;
+    public T data;
+    public Tree<T> parent;
+    public List<Tree<T>> children;
 
     public Tree(T data) {
         this.data = data;

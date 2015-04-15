@@ -69,9 +69,7 @@ public class ID3 {
                 if(a==-1)
                     child.addChild("yes");
                 else if(a==-2)
-                    child.addChild("no");
-                else if(a==-3)
-                    child.addChild("UD");
+                    child.addChild("no");                
                 else if(a==-4){                  
                     child.addChild("NULL");
                 }                
